@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Vote Results</title>
+    <title>Bầu Chọn</title>
 
     <!-- Bootstrap -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
@@ -18,7 +18,7 @@
       <div class="limiter ">
         <div class="container-table100">
           <div class="wrap-table100" >
-            <h1 class="text-center">Vote Results</h1>
+            <h1 class="text-center">Kết Quả Bầu Chọn</h1>
             <hr/>
             <div id="loader">
               <p class="text-center">Loading...</p>
@@ -29,8 +29,8 @@
               <thead>
                   <tr class="row header">
                       <th class="cell"><div class="center">#</div></th>
-                      <th class="cell"><div class="center">NAME</div></th>
-                      <th class="cell"><div class="center">VOTES</div></th>
+                      <th class="cell"><div class="center">TÊN</div></th>
+                      <th class="cell"><div class="center">SỐ PHIẾU</div></th>
                   </tr>
               </thead>
               
@@ -42,11 +42,11 @@
           <div class="wrap-table100">
             <hr/>
             <form onSubmit="App.castVote(); return false;">              
-              <label for="candidatesSelect">Select Candidate</label>
+              <label for="candidatesSelect">CHỌN ỨNG CỬ VIÊN</label>
               <div class="form-group" style="display: flex; flex-direction: row">
                 <select class="form-control" id="candidatesSelect" style="margin-right: 10px;">
                 </select>
-                <button type="submit">Vote</button>
+                <button type="submit">BỎ PHIẾU</button>
               </div>
               <hr />
             </form>
