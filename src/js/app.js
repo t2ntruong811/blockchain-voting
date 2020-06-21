@@ -80,6 +80,21 @@ App = {
 
       for (var i = 1; i <= candidatesCount; i++) {
         electionInstance.candidates(i).then(function(candidate) {
+          if(candidatesResults.children().length > 3){
+            candidatesResults.empty();
+            // location.reload(true);
+            if(document.URL.indexOf("#")==-1){ //Check if the current URL contains '#'
+                url = document.URL+"#"; // use "#". Add hash to URL
+                location = "#";
+                location.reload(true); //Reload the page
+            }
+          }
+
+          if(candidatesSelect.children().length > 3){
+            candidatesSelect.empty();
+            // location.reload(true);
+          }
+
           var id = candidate[0];
           var name = candidate[1];
           var voteCount = candidate[2];
