@@ -14,57 +14,47 @@
     
   </head>
   <body>
-    <div class="limiter">
-      <div class="container-table100">
-        <div class="wrap-table100" >
-          <h1 class="text-center">Vote Results</h1>
-          <hr/>
-          <div>
-            <p class="text-center">Loading...</p>
+    <section>
+      <div class="limiter ">
+        <div class="container-table100">
+          <div class="wrap-table100" >
+            <h1 class="text-center">Vote Results</h1>
+            <hr/>
+            <div id="loader">
+              <p class="text-center">Loading...</p>
+            </div>
+          </div>
+          <div class="wrap-table100" id="content">
+            <table>
+              <thead>
+                  <tr class="row header">
+                      <th class="cell"><div class="center">#</div></th>
+                      <th class="cell"><div class="center">NAME</div></th>
+                      <th class="cell"><div class="center">VOTES</div></th>
+                  </tr>
+              </thead>
+              
+              <tbody id="candidatesResults">
+              </tbody>
+            </table>
+          </div>
+
+          <div class="wrap-table100">
+            <hr/>
+            <form onSubmit="App.castVote(); return false;">              
+              <label for="candidatesSelect">Select Candidate</label>
+              <div class="form-group" style="display: flex; flex-direction: row">
+                <select class="form-control" id="candidatesSelect" style="margin-right: 10px;">
+                </select>
+                <button type="submit">Vote</button>
+              </div>
+              <hr />
+            </form>
+            <p id="accountAddress" class="text-center"></p>
           </div>
         </div>
-        <div class="wrap-table100">
-          <table>
-            <thead>
-              <tr class="row header">
-                <th class="cell"><div class="center">#</div></th>
-                <th class="cell"><div class="center">NAME</div></th>
-                <th class="cell"><div class="center">VOTES</div></th>
-              </tr>
-            </thead>
-            
-            <tbody>
-              <tr class="row">
-                <td class="cell"><div class="center">1</div></td>
-                <td class="cell"><div class="center">Candidte 1</div></td>
-                <td class="cell"><div class="center">2</div></td>
-            </tr>
-            <tr class="row">
-                <td class="cell"><div class="center">2</div></td>
-                <td class="cell"><div class="center">Candidte 2</div></td>
-                <td class="cell"><div class="center">10</div></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="wrap-table100">
-          <hr/>
-          <form return false;">              
-            <label for="candidatesSelect">Select Candidate</label>
-            <div class="form-group" style="display: flex; flex-direction: row">
-              <select class="form-control" style="margin-right: 10px;">
-                <option>Candidate 1</option>
-                <option>Candidate 2</option>
-              </select>
-              <button type="submit">Vote</button>
-            </div>
-            <hr />
-          </form>
-          <p class="text-center">0xF350aa81Dd3c78b4EA5Cb79BEe16c6094A2fddB1</p>
-        </div>
       </div>
-    </div>
+    </section>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -57,8 +57,8 @@ App = {
     var content = $("#content");
 
     loader.show();
-    content.show();
-
+    content.hide();
+    // candidatesResults.html(<tbody> </tbody>);
     // Load account data
     web3.eth.getCoinbase(function(err, account) {
       if (err === null) {
@@ -85,7 +85,11 @@ App = {
           var voteCount = candidate[2];
 
           // Render candidate Result
-          var candidateTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
+          var candidateTemplate = `<tr class="row">` +
+                                      `<td class="cell"><div class="center">` + id + `</div></td>`+
+                                      `<td class="cell"><div class="center">` + name + `<div></td>`+
+                                      `<td class="cell"><div class="center">` + voteCount + ` </div></td>`+
+                                  `</tr>`;
           candidatesResults.append(candidateTemplate);
 
           // Render candidate ballot option

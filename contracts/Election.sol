@@ -1,4 +1,4 @@
-pragma solidity 0.4.25;
+pragma solidity >=0.4.21 <0.7.0;
 
 contract Election {
     // Model a Candidate
@@ -22,11 +22,13 @@ contract Election {
     );
 
     constructor () public {
-        addCandidate("Candidate 1");
-        addCandidate("Candidate 2");
+        addCandidate("Lê Hồ Hữu Trí");
+        addCandidate("Nguyễn Thanh Trí");
+        addCandidate("Hà Quang Trọng");
+        addCandidate("Trần Nguyễn Ngọc Trường");
     }
 
-    function addCandidate (string _name) private {
+    function addCandidate (string memory _name) private {
         candidatesCount ++;
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
     }
